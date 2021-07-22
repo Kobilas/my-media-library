@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "dist/",
+      "rootDir": "",
+      "jsx": "react",
+      "sourceMap": true,
+      "strict": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitOverride": true,
+      "noImplicitReturns": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noUnusedLocals": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+    },
+    "exactOptionalPropertyTypes": true,
+    "include": ["src/**/*", "webpack.config.ts"],
+    "exclude": ["node_modules", ".vscode", "public", "dist"]
+}
+  

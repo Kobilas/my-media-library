@@ -1,0 +1,45 @@
+{
+  "name": "mymedialib",
+  "version": "1.0.0",
+  "description": "implement multiple APIs into one backend/frontend",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "tsc",
+    "copyfiles": "copyfiles -f src/.env dist/src",
+    "start": "concurrently \"tsc -w\" \"nodemon -r dotenv/config dist/src/app.js dotenv_config_path=dist/src/.env\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kobilas/mymedialib.git"
+  },
+  "author": "Matthew Kobilas (mattkobi789@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kobilas/mymedialib/issues"
+  },
+  "homepage": "https://github.com/Kobilas/mymedialib#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/express-jwt": "^6.0.2",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/node": "^16.3.1",
+    "@types/pg": "^8.6.1",
+    "concurrently": "^6.2.0",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  }
+}
