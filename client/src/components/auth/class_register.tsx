@@ -27,12 +27,12 @@ class Registration extends React.Component<any, RegistrationState> {
 
     handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         const target = event.target;
-        const name = target.name;
+        const key = target.name;
         const value = target.value;
         
         this.setState((prevState) => ({
             ...prevState,
-            [name]: value,
+            [key]: value,
         }));
     };
 
@@ -48,17 +48,17 @@ class Registration extends React.Component<any, RegistrationState> {
 
     override render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label>Email:</label>
-                <input type="text" name="email" 
+                <input type="text" name="email" required
                     value={this.state.email}
                     onChange={this.handleChange} />
                 <label>Password:</label>
-                <input type="hidden" name="password" 
+                <input type="hidden" name="password" required
                     value={this.state.password}
                     onChange={this.handleChange} />
                 <label>Confirm Password:</label>
-                <input type="hidden" name="confirmPassword" 
+                <input type="hidden" name="confirmPassword" required
                     value={this.state.confirmPassword} 
                     onChange={this.handleChange} />
                 <input type="submit" value="Submit" />
